@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_dental_treatment_tree" model="ir.ui.view">
+        <field name="name">dental.treatment.tree</field>
+        <field name="model">dental.treatment</field>
+        <field name="arch" type="xml">
+            <tree string="Treatment">
+                <field name="date"/>
+                <field name="patient_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_dental_treatment_form" model="ir.ui.view">
+        <field name="name">dental.treatment.form</field>
+        <field name="model">dental.treatment</field>
+        <field name="arch" type="xml">
+            <form string="Treatment">
+                <header>
+                    <button name="trigger_register_payment" string="Register Payment" type="object"/>
+                </header>
+                <sheet>
+                    <h2><field name="name"/></h2>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" name="trigger_prescription" class="oe_stat_button" icon="fa-plus-square-o" string="Prescription"/>
+                        <button type="object" name="trigger_next_appointment" class="oe_stat_button" icon="fa-calendar" string="Next Appointment"/>
+                        <button type="object" name="trigger_report" class="oe_stat_button" icon="fa-file-text-o"  string="Report"/>
+                        <button type="object" name="trigger_treatment_history" class="oe_stat_button" icon="fa-heartbeat"  string="Treatment History"/>
+                    </div>
+
+                    <group col="4">
+                        <field name="date"/>
+                        <field name="patient_id"/>
+                        <field name="doctor_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Treatment">
+                            <group col="4">
+                                <field name="symptoms_ids" widget="many2many_tags"/>
+                                <field name="diagnosis_ids" widget="many2many_tags"/>
+                                <field name="id" invisible="1"/>
+                                <field name="diagnosis_comment" placeholder="Comment.."/>
+                            </group>
+
+                            <group col="4">
+                                <field name="treatment_ids" widget="many2many_tags"/>
+                                <field name="treatment_comment" placeholder="Comment.."/>
+                            </group>
+
+                            <separator string="Prescription"/>
+                            <field name="prescription_ids">
+                                <tree editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="morning"/>
+                                    <field name="noon"/>
+                                    <field name="evening"/>
+                                    <field name="consumption_type"/>
+                                    <field name="quantity"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Teeth Detail">
+                            <field name="teeth_ids">
+                                <tree editable="bottom">
+                                    <field name="teeth"/>
+                                    <field name="teeth_type"/>
+                                    <field name="treatment_ids" widget="many2many_tags"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <field name="comment" placeholder="Comment..."/>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_dental_treatment" model="ir.actions.act_window">
+        <field name="name">Treatment</field>
+        <field name="res_model">dental.treatment</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Menu : Reception-->
+    <menuitem id="hospital_reception" name="Reception" sequence="10" web_icon="hospital,static/src/image/reception.jpg"/>
+    <menuitem id="hospital_reception_contact" name="Contact" parent="hospital_reception" sequence="10"/>
+    <menuitem id="hospital_reception_contact_patient" name="Patient" action="action_arc_person_patient" parent="hospital_reception_contact" sequence="10"/>
+    <menuitem id="hospital_reception_contact_staff" name="Staff" action="action_arc_person_staff" parent="hospital_reception_contact" sequence="20"/>
+    <menuitem id="hospital_reception_contact_supplier" name="Supplier" action="action_arc_person_supplier" parent="hospital_reception_contact" sequence="30"/>
+    <menuitem id="hospital_reception_contact_service" name="Service" action="action_arc_person_service" parent="hospital_reception_contact" sequence="40"/>
+
+    <menuitem id="hospital_reception_appointment" name="Appointment" action="action_arc_appointment" parent="hospital_reception" sequence="20"/>
+    <menuitem id="hospital_reception_doctor_avail" name="Doctor Availability" action="action_doctor_availability" parent="hospital_reception" sequence="30"/>
+    <menuitem id="hospital_reception_doctor_time" name="Doctor Timings" action="action_doctor_timings" parent="hospital_reception" sequence="40"/>
+    <menuitem id="hospital_reception_notes" name="Notes" action="action_arc_notes" parent="hospital_reception" sequence="50"/>
+    <menuitem id="hospital_reception_reminder" name="Reminder" action="action_arc_reminder" parent="hospital_reception" sequence="60"/>
+
+    <menuitem id="hospital_reception_register" name="Register" parent="hospital_reception" sequence="70"/>
+    <menuitem id="hospital_reception_register_patient" name="Patient" action="action_arc_patient" parent="hospital_reception_register" sequence="10"/>
+    <menuitem id="hospital_reception_register_person" name="Person" action="action_arc_person" parent="hospital_reception_register" sequence="20"/>
+    <menuitem id="hospital_reception_register_staff" name="Staff" action="action_arc_employee" parent="hospital_reception_register" sequence="30"/>
+
+    <!--Menu : OPD-->
+    <menuitem id="hospital_out" name="OPD" sequence="20" web_icon="hospital,static/src/image/out_patient.jpg"/>
+    <menuitem id="hospital_out_patient" name="Patient" action="action_arc_person_patient" parent="hospital_out" sequence="10"/>
+    <menuitem id="hospital_out_appointment" name="Appointment" action="action_arc_appointment" parent="hospital_out" sequence="20"/>
+    <menuitem id="hospital_out_treatment" name="Treatment" action="action_dental_treatment" parent="hospital_out" sequence="30"/>
+    <menuitem id="hospital_out_prescription" name="Prescription" action="action_dental_treatment_prescription" parent="hospital_out" sequence="40"/>
+    <menuitem id="hospital_out_clinical_notes" name="Clinical Notes" action="action_clinical_notes" parent="hospital_out" sequence="50"/>
+
+
+    <!--Menu : Billing-->
+    <menuitem id="hospital_billing" name="Patient Billing" sequence="30" web_icon="hospital,static/src/image/billing.jpg"/>
+    <menuitem id="hospital_billing_invoice" name="Invoice" action="action_arc_invoice" parent="hospital_billing" sequence="10"/>
+    <menuitem id="hospital_billing_payment" name="Payment" action="action_arc_payment" parent="hospital_billing" sequence="20"/>
+    <menuitem id="hospital_billing_tax" name="Tax" action="action_product_tax" parent="hospital_billing" sequence="30"/>
+
+
+    <!--Menu : Configuration-->
+    <menuitem id="hospital_config" name="Configuration" sequence="40" web_icon="hospital,static/src/image/configuration.jpg"/>
+    <menuitem id="hospital_config_symptoms" name="Symptoms" action="action_arc_symptoms" parent="hospital_config" sequence="10"/>
+    <menuitem id="hospital_config_diagnosis" name="Diagnosis" action="action_arc_diagnosis" parent="hospital_config" sequence="20"/>
+    <menuitem id="hospital_config_treatment" name="Treatment" action="action_arc_treatment" parent="hospital_config" sequence="30"/>
+    <menuitem id="hospital_config_appointment_reason" name="Appointment reason" action="action_appointment_reason" parent="hospital_config" sequence="40"/>
+    <menuitem id="hospital_config_appointment_type" name="Appointment Type" action="action_appointment_type" parent="hospital_config" sequence="50"/>
+    <menuitem id="hospital_config_invoice_description" name="Invoice Description" action="action_invoice_description" parent="hospital_config" sequence="60"/>
+
+
+</odoo>
