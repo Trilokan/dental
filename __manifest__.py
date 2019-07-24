@@ -35,7 +35,7 @@
         "security/ir.model.access.csv",
 
         "sequence/base.xml",
-        # "sequence/testing.xml",
+        "sequence/testing.xml",
 
         # Base
         "views/base/patient.xml",
@@ -70,6 +70,13 @@
         "views/billing/payment.xml",
         "views/billing/tax.xml",
 
+        # Demo
+        "views/demo/braces.xml",
+        "views/demo/crown.xml",
+        "views/demo/dental_fillings.xml",
+        "views/demo/dental_implant.xml",
+        "views/demo/root_canal_treatment.xml",
+
         # Configuration
         "views/configuration/appointment_reason.xml",
         "views/configuration/appointment_type.xml",
@@ -85,6 +92,7 @@
         "data/prescrip_table_template.xml",
         "data/treatment_template.xml",
         "data/opd_template.xml",
+
 
     ],
     "demo": [

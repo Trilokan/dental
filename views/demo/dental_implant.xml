@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Form -->
+    <record id="view_arc_demo_implant_form" model="ir.ui.view">
+        <field name="name">arc.demo.implant.form</field>
+        <field name="model">arc.demo</field>
+        <field name="arch" type="xml">
+            <form string="Dental Implant">
+                <sheet>
+                     <iframe width="100%" height="315"
+                             src="../dental/static/src/video/implant.mp4"
+                             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+
+                     </iframe>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_arc_demo_implant" model="ir.actions.act_window">
+        <field name="name">Dental Implant</field>
+        <field name="res_model">arc.demo</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_arc_demo_implant_form"/>
+    </record>
+    
+    <record model="ir.actions.act_window.view" id="action_arc_demo_implant_form">
+        <field eval="2" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_arc_demo_implant_form" />
+        <field name="act_window_id" ref="action_arc_demo_implant"/>
+    </record>
+    
+</odoo>

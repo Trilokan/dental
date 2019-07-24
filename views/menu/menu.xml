@@ -21,7 +21,7 @@
     <menuitem id="hospital_reception_register_staff" name="Staff" action="action_arc_employee" parent="hospital_reception_register" sequence="30"/>
 
     <!--Menu : OPD-->
-    <menuitem id="hospital_out" name="OPD" sequence="20" web_icon="hospital,static/src/image/out_patient.jpg"/>
+    <menuitem id="hospital_out" name="Treatment" sequence="20" web_icon="hospital,static/src/image/out_patient.jpg"/>
     <menuitem id="hospital_out_patient" name="Patient" action="action_arc_person_patient" parent="hospital_out" sequence="10"/>
     <menuitem id="hospital_out_appointment" name="Appointment" action="action_arc_appointment" parent="hospital_out" sequence="20"/>
     <menuitem id="hospital_out_treatment" name="Treatment" action="action_dental_treatment" parent="hospital_out" sequence="30"/>
@@ -35,9 +35,16 @@
     <menuitem id="hospital_billing_payment" name="Payment" action="action_arc_payment" parent="hospital_billing" sequence="20"/>
     <menuitem id="hospital_billing_tax" name="Tax" action="action_product_tax" parent="hospital_billing" sequence="30"/>
 
+    <!--Menu : Demo-->
+    <menuitem id="hospital_demo" name="Demo" sequence="40" web_icon="hospital,static/src/image/out_patient.jpg"/>
+    <menuitem id="hospital_demo_rct" name="Root Canal Treatment" action="action_arc_demo_root" parent="hospital_demo" sequence="10"/>
+    <menuitem id="hospital_demo_implant" name="Dental Implant" action="action_arc_demo_implant" parent="hospital_demo" sequence="20"/>
+    <menuitem id="hospital_demo_filling" name="Dental Fillings" action="action_arc_demo_fillings" parent="hospital_demo" sequence="20"/>
+    <menuitem id="hospital_demo_braces" name="Braces" action="action_arc_demo_braces" parent="hospital_demo" sequence="30"/>
+    <menuitem id="hospital_demo_crown" name="Crown" action="action_arc_demo_crown" parent="hospital_demo" sequence="40"/>
 
     <!--Menu : Configuration-->
-    <menuitem id="hospital_config" name="Configuration" sequence="40" web_icon="hospital,static/src/image/configuration.jpg"/>
+    <menuitem id="hospital_config" name="Configuration" sequence="50" web_icon="hospital,static/src/image/configuration.jpg"/>
     <menuitem id="hospital_config_symptoms" name="Symptoms" action="action_arc_symptoms" parent="hospital_config" sequence="10"/>
     <menuitem id="hospital_config_diagnosis" name="Diagnosis" action="action_arc_diagnosis" parent="hospital_config" sequence="20"/>
     <menuitem id="hospital_config_treatment" name="Treatment" action="action_arc_treatment" parent="hospital_config" sequence="30"/>

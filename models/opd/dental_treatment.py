@@ -209,7 +209,7 @@ class DentalTreatment(models.Model):
             'view_id': False,
             'type': 'ir.actions.act_window',
             'target': 'new',
-            'context': {'default_doctor_id': self.patient_id.id,
+            'context': {'default_doctor_id': self.doctor_id.id,
                         'default_appointment_for': self.patient_id.id}
         }
 

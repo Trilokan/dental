@@ -35,3 +35,4 @@ access_arc_notes,access.arc.notes,model_arc_notes,dental.group_hospital_user,1,1
 access_arc_reminder,access.arc.reminder,model_arc_reminder,dental.group_hospital_user,1,1,1,1
 access_arc_template,access.arc.template,model_arc_template,dental.group_hospital_user,1,1,1,1
 access_arc_fee,access.arc.fee,model_arc_fee,dental.group_hospital_user,1,1,1,1
+access_arc_demo,access.arc.demo,model_arc_demo,dental.group_hospital_user,1,1,1,1

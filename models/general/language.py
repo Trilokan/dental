@@ -11,4 +11,4 @@ class Language(models.Model):
     company_id = fields.Many2one(comodel_name="res.company", string="Company",
                                  default=lambda self: self.env.user.company_id.id)
 
-    _sql_constraints = [("name", "unique(name)", "Language must be unique")]
+

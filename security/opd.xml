@@ -53,6 +53,17 @@
             <field name="groups" eval="[(4, ref('dental.group_hospital_user'))]"/>
         </record>
 
+        <record model="ir.rule" id="hospital_arc_demo">
+            <field name="name">Demo</field>
+            <field name="model_id" ref="model_arc_demo"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id', '=', False),
+                                            ('company_id', 'child_of', [user.company_id.id]),
+                                        ]</field>
+            <field name="groups" eval="[(4, ref('dental.group_hospital_user'))]"/>
+        </record>
+
+
     </data>
 
 </odoo>

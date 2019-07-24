@@ -6,3 +6,4 @@ from . import staff
 from . import opd
 from . import billing
 from . import configuration
+from . import demo
